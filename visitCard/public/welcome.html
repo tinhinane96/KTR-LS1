@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>welcome</title>
-    <link rel="stylesheet" href="./stylesheets/welcome.css">
-    <script src="./javascripts/welcome.js"></script>
-  </head>
-  
-  <body>
-    <h1>Login or Register</h1>
-    <p>Please choose whether you want to log in or register:</p>
-    <form>
-      <div>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-      </div>
-      <div>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-      </div>
-      <button type="login-button">Login</button>
-    </form>    
-    <button id="register-button">Register</button>
-  </body>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <title>login/register</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/welcome.css"/>
+
+  <script src="../javascripts/welcome.js" defer="true"></script>
+</head>
+<body>
+  <h1>Login or Register</h1>
+  <p>Please choose whether you want to log in or register:</p>
+  <form id="login-form">
+    <div>
+      <label for="email">email:</label>
+      <input type="text" id="email" name="username">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <button type="login-button">Login</button>
+  </form>    
+  <button id="register-button">Register</button>
+  <div id="message"></div>
+</body>
+
 </html>

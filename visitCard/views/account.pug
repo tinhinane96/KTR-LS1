@@ -1,0 +1,10 @@
+extends layout
+
+append headblock
+  script(src="/javascripts/account.js")
+
+block content
+  h1= title
+  div#User
+    h2
+      div.UserName #{user.name}

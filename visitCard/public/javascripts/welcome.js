@@ -1,30 +1,38 @@
 
-
 const setup = () => {
-  document.getElementById('login-button')?.addEventListener('click', clickLogin);
+  document.getElementById('login-form')?.addEventListener('submit', event=>{
+    event.preventDefault();
+    console.log('login button clicked');
+    clickLogin()}
+    );
   
-  document.getElementById('register-button').addEventListener('click', clickRegister);  
+  document.getElementById('register-button')?.addEventListener('click', clickRegister);  
 };
-const clickLogin = () => {
+window.addEventListener('DOMContentLoaded', setup);
+const clickLogin = async() => {
   const data = {
-    username: document.getElementById('username').value,
+    username: document.getElementById('email').value,
     password: document.getElementById('password').value
   };
 
-  fetch('/api/register', {
+  const response = await fetch('/access/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
   })
-    .then(res => res.json())
-    .then(data => {
-    })
-    .catch(error => {
-    });
+  if (response.ok) {
+    window.location.href = '/account';
+  }
+  else{
+    console.log('login failed');
+    //infromer l'utilisateur
+    const p = document.createElement('p');
+    p.textContent = 'login failed';
+    document.getElementById('message').appendChild(p);
+  }
 }
-const clickRegister = () => {
-  window.location.href = '/register';
+const clickRegister = async() => {
+  window.location.href = '/access/register';
 }
-window.addEventListener('DOMContentLoaded', setup);

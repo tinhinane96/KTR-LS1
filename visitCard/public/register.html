@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Register</title>
-    <link rel="stylesheet" href="./stylesheets/register.css">
-    <script src="./javascripts/register.js"></script>
-  </head>
-  
-  <body>
-    <h1>Register</h1>
-    <form>
-        <div>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username">
-        </div>
-        <div>
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password">
-        </div>
-        <div>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email">
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-         
-    <button id="register-button">Register</button>
-  </body>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <title>login/register</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/register.css"/>
+
+  <script src="../javascripts/register.js" defer="true"></script>
+</head>
+
+<body>
+  <h1>Register</h1>
+  <form id="register">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+      </div>  
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="message"></div>
+  <div>
+    <a href="/access/login">vous avez déjà un compte ?</a>
+  </div>
+
+  <div id="problem"></div>
+
+</body>
+
 </html>

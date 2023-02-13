@@ -1,8 +1,50 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family : Verdana, Helvetica, Arial, sans-serif;
 }
+
 
 a {
   color: #00B7FF;
 }
+
+
+#productList , #ownerProductList  {
+  border : solid 2px #404040;
+  padding : 50px;
+  margin: 10px auto;
+}
+tr {
+  border : solid thin #404040;
+  background-color : #E0E0E0;
+}
+td.description, td.price {
+  padding : 2px 5px;
+}
+
+td.price {
+  color  : green;
+}
+
+input, button {
+  font-size : 24px;
+  margin : 0px 2px;
+}
+nav{
+  background:#E0E090;
+}
+
+#result, #answer {
+  margin-top : 10px;
+  background-color : rgba(200,20,20,0.5);
+  padding : 3px;
+}
+
+
+#JSONanswer  {
+  padding : 10px;
+  margin  :10px;
+  font-size : larger;
+  font-style : italic;
+}
+
