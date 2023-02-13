@@ -1,4 +1,4 @@
-const User = require('../models/models');
+const User = require('../models/card.model');
 const jwt = require('jsonwebtoken');
 const jwtConfig = require('../config/jwt.config');
 

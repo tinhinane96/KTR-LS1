@@ -8,3 +8,30 @@ block content
   div#User
     h2
       div.UserName #{user.name}
+      div.UserEmail #{user.email}
+  div#addCard
+    h2 Add Card
+    form#createCard
+      div
+        label(for="name") Name
+        input(type="text" name="name" id="cardName")
+      div
+        label(for="email") Email
+        input(type="text" name="email" id="cardEmail")
+      div
+        label(for="phone") Phone
+        input(type="text" name="phone" id="cardPhone")
+      div
+        label(for="company") Company
+        input(type="text" name="company" id="cardCompany")
+      div
+        input(type="submit" value="Add Card")
+  div#cards
+    h2 Cards
+    div#cardsList
+      each card in cards
+        div.card
+          div.cardName #{card.name}
+          div.cardemail #{card.email}
+          div.cardphone #{card.phone}
+          div.company #{card.company}
