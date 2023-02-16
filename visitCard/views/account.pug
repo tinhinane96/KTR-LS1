@@ -2,15 +2,16 @@ extends layout
 
 append headblock
   script(src="/javascripts/account.js")
+  link(rel="stylesheet" href="/stylesheets/account.css")
 
 block content
-  h1= title
+  h1= "Mes Cartes de Visites"
   div#User
-    h2
+    div#UserStart
       div.UserName #{user.name}
       div.UserEmail #{user.email}
-      div.UserPhone #{user.phone}
       div.UserCompany #{user.company}
+    div#UserEnd
       button#logout logout
   div#addCard
     h2 Add Card
