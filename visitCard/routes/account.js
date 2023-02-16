@@ -8,5 +8,5 @@ const userController = require('../controllers/user.controller');
 
 router.get('/', authMiddleware.validToken,userController.home );
 router.get('/me', authMiddleware.validToken,userController.me );
-router.get('/addCard',userController.createCard);
+router.post('/addCard',userController.createCard);
 module.exports = router;

@@ -1,6 +1,7 @@
 let id;
 const setup = () => {
     const userName = document?.getElementById('userName');
+    
     document.getElementById("createCard")?.addEventListener('submit', 
         event => {
             event.preventDefault();
@@ -8,6 +9,7 @@ const setup = () => {
             createCard();
         });
     getUser()
+    document.getElementById('logout')?.addEventListener('click', logout);
 
 }
 const getUser = async () => {
@@ -40,6 +42,8 @@ const createCard = async () => {
         },
         body: JSON.stringify(data)
     };
+    console.log(requestOptions);
+    console.log(data);
     const response = await fetch('/account/addCard', requestOptions);
     if (response.ok) {
         console.log(response);
@@ -51,4 +55,13 @@ const createCard = async () => {
     }
 
 }
+const logout = async () => {
+    const requestOptions = {
+                           method :'GET',
+                         };
+    const response = await fetch(`/access/logout`, requestOptions);
+    if (response.ok) {
+      window.location.href= '/';
+    }
+  }
 window.addEventListener('DOMContentLoaded', setup);

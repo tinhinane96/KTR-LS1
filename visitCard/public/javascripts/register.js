@@ -9,6 +9,8 @@ const clickSubmit = async () => {
     name: document.getElementById('username').value,
     password: document.getElementById('password').value,
     email: document.getElementById('email').value,
+    phone : document.getElementById('phone').value,
+    company : document.getElementById('company').value
   };
   const body = JSON.stringify(data);
   const requestOptions = {

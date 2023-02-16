@@ -5,8 +5,6 @@ const setup = () => {
     console.log('login button clicked');
     clickLogin()}
     );
-  
-  document.getElementById('register-button')?.addEventListener('click', clickRegister);  
 };
 window.addEventListener('DOMContentLoaded', setup);
 const clickLogin = async() => {
@@ -32,7 +30,4 @@ const clickLogin = async() => {
     p.textContent = 'login failed';
     document.getElementById('message').appendChild(p);
   }
-}
-const clickRegister = async() => {
-  window.location.href = '/access/register';
 }

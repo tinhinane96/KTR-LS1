@@ -15,6 +15,7 @@ const UserSchema = new Schema({
     required: true
   },
   phone: Number,
+  company: String,
 });
 module.exports=UserSchema;
 const dbConnection=require('../db/dbClient.js');
